@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ingest Profiles API Sample: Get All Profiles for an Account</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/source-code-pro" type="text/css"/>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <fieldset>
+
+  <legend>Input</legend>
+
+  <p>If you do not enter account information, a Brightcove sample account will be used.</p>
+
+  <p>Account id: <input id="account_id_input" type="text" placeholder="1752604059001" /></p>
+
+  <p>Client id: <input id="client_id_input" type="text" size="60" placeholder="c5d0a622-5479-46d8-8d8a-5f034b943fab" /></p>
+
+  <p>Client secret: <input id="client_secret_input" type="text" size="60" placeholder="w7NQYu0vUloM4GYYy2SXAxrvyFpt8fwI35qAFZcS13-VIgs0itwKNsAwHOS80sOWKJ1BUwHIvSFG" /></p>
+
+  <p><button class="bcls-button" id="get_profiles">Get Account Profiles</button></p>
+
+</fieldset>
+
+<fieldset>
+  <legend>Output</legend>
+
+  <div id="logger" style="color:rgb(237, 104, 38)">
+    <p>Waiting for input...</p>
+  </div>
+
+  <h4>Current API request</h4>
+
+  <pre class="bcls-code">
+  <code id="api_request_display">API request will appear here...</code></pre>
+
+  <h4>Response data</h4>
+  <h5>Profile list filters</h5>
+  <div class="list-filters">
+    <p><input id="show_all" value="show_all" type="radio" name="list_filter" checked>&nbsp;<label for="show_all">Show all</label></p>
+    <p><input id="show_standard" value="show_standard" type="radio" name="list_filter">&nbsp;<label for="show_standard">Show standard</label></p>
+    <p><input id="show_custom" value="show_custom" type="radio" name="list_filter">&nbsp;<label for="show_custom">Show custom</label></p>
+    <p><input id="show_live" value="show_live" type="radio" name="list_filter">&nbsp;<label for="show_live">Show standard Live</label></p>
+  </div>
+  <div class="list-filters">
+    <p><input id="hide_legacy" value="hide_legacy" type="radio" name="list_filter">&nbsp;<label for="hide_legacy">Show legacy only</label></p>
+    <p><input id="hide_dynamic_delivery" value="hide_dynamic_delivery" type="radio" name="list_filter">&nbsp;<label for="hide_dynamic_delivery">Show Dynamic Delivery Only</label></p>
+    <p><input id="hide_cae" value="hide_cae" type="radio" name="list_filter">&nbsp;<label for="hide_cae">Hide CAE (only)</label></p>
+    <p><input id="show_cae" value="show_cae" type="radio" name="list_filter">&nbsp;<label for="show_cae">Show CAE (only)</label></p>
+  </div>
+  <div class="list-filters">
+    <p><input id="hide_obsolete" value="hide_obsolete" type="checkbox" name="hide_obsolete" checked>&nbsp;<label for="hide_obsolete">Hide obsolete profiles</label></p>
+  </div>
+  <h5>Filtered Profile list</h5>
+  <div id="profile_list" style="padding: 1em;"></div>
+
+  <h4>Full API response</h4>
+  <pre class="bcls-code">
+  <code id="api_response">API Response will appear here...</code></pre>
+</fieldset>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
